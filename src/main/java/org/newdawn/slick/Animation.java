@@ -649,7 +649,7 @@ public class Animation implements Renderable {
 	
 	
 	/**
-	 * @see java.lang.Object#toString()
+	 * @see Object#toString()
 	 */
 	public String toString() {
 		String res = "[Animation ("+frames.size()+") ";

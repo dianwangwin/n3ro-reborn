@@ -28,49 +28,49 @@ public class PNGImageData implements LoadableImageData {
 	private ByteBuffer scratch;
 	
     /**
-     * @see org.newdawn.slick.opengl.ImageData#getDepth()
+     * @see ImageData#getDepth()
      */
 	public int getDepth() {
 		return bitDepth;
 	}
 
 	/**
-	 * @see org.newdawn.slick.opengl.ImageData#getImageBufferData()
+	 * @see ImageData#getImageBufferData()
 	 */
 	public ByteBuffer getImageBufferData() {
 		return scratch;
 	}
 
 	/**
-	 * @see org.newdawn.slick.opengl.ImageData#getTexHeight()
+	 * @see ImageData#getTexHeight()
 	 */
 	public int getTexHeight() {
 		return texHeight;
 	}
 
 	/**
-	 * @see org.newdawn.slick.opengl.ImageData#getTexWidth()
+	 * @see ImageData#getTexWidth()
 	 */
 	public int getTexWidth() {
 		return texWidth;
 	}
 
 	/**
-	 * @see org.newdawn.slick.opengl.LoadableImageData#loadImage(java.io.InputStream)
+	 * @see LoadableImageData#loadImage(InputStream)
 	 */
 	public ByteBuffer loadImage(InputStream fis) throws IOException {
 		return loadImage(fis, false, null);
 	}
 
 	/**
-	 * @see org.newdawn.slick.opengl.LoadableImageData#loadImage(java.io.InputStream, boolean, int[])
+	 * @see LoadableImageData#loadImage(InputStream, boolean, int[])
 	 */
 	public ByteBuffer loadImage(InputStream fis, boolean flipped, int[] transparent) throws IOException {
 		return loadImage(fis, flipped, false, transparent);
 	}
 
 	/**
-	 * @see org.newdawn.slick.opengl.LoadableImageData#loadImage(java.io.InputStream, boolean, boolean, int[])
+	 * @see LoadableImageData#loadImage(InputStream, boolean, boolean, int[])
 	 */
 	public ByteBuffer loadImage(InputStream fis, boolean flipped, boolean forceAlpha, int[] transparent) throws IOException {
 		if (transparent != null) {
@@ -186,7 +186,7 @@ public class PNGImageData implements LoadableImageData {
     }
     
 	/**
-	 * @see org.newdawn.slick.opengl.LoadableImageData#configureEdging(boolean)
+	 * @see LoadableImageData#configureEdging(boolean)
 	 */
 	public void configureEdging(boolean edging) {
 	}

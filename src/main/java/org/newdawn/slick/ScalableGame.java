@@ -60,7 +60,7 @@ public class ScalableGame implements Game {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.BasicGame#init(org.newdawn.slick.GameContainer)
+	 * @see BasicGame#init(GameContainer)
 	 */
 	public void init(GameContainer container) throws SlickException {
 		this.container = container;
@@ -124,7 +124,7 @@ public class ScalableGame implements Game {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#update(org.newdawn.slick.GameContainer, int)
+	 * @see BasicGame#update(GameContainer, int)
 	 */
 	public void update(GameContainer container, int delta) throws SlickException {
 		if ((targetHeight != container.getHeight()) ||
@@ -136,7 +136,7 @@ public class ScalableGame implements Game {
 	}
 
 	/**
-	 * @see org.newdawn.slick.Game#render(org.newdawn.slick.GameContainer, org.newdawn.slick.Graphics)
+	 * @see Game#render(GameContainer, Graphics)
 	 */
 	public final void render(GameContainer container, Graphics g)
 			throws SlickException {
@@ -173,14 +173,14 @@ public class ScalableGame implements Game {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.Game#closeRequested()
+	 * @see Game#closeRequested()
 	 */
 	public boolean closeRequested() {
 		return held.closeRequested();
 	}
 
 	/**
-	 * @see org.newdawn.slick.Game#getTitle()
+	 * @see Game#getTitle()
 	 */
 	public String getTitle() {
 		return held.getTitle();

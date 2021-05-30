@@ -183,14 +183,14 @@ public class Color implements Serializable {
 	}
 	
 	/**
-	 * @see java.lang.Object#hashCode()
+	 * @see Object#hashCode()
 	 */
 	public int hashCode() {
 		return ((int) (r+g+b+a)*255);
 	}
 	
 	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
+	 * @see Object#equals(Object)
 	 */
 	public boolean equals(Object other) {
 		if (other instanceof Color) {
@@ -202,7 +202,7 @@ public class Color implements Serializable {
 	}
 	
 	/**
-	 * @see java.lang.Object#toString()
+	 * @see Object#toString()
 	 */
 	public String toString() {
 		return "Color ("+r+","+g+","+b+","+a+")";

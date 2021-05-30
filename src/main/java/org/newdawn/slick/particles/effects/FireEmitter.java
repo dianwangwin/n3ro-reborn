@@ -54,7 +54,7 @@ public class FireEmitter implements ParticleEmitter {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.particles.ParticleEmitter#update(org.newdawn.slick.particles.ParticleSystem, int)
+	 * @see ParticleEmitter#update(ParticleSystem, int)
 	 */
 	public void update(ParticleSystem system, int delta) {
 		timer -= delta;
@@ -71,7 +71,7 @@ public class FireEmitter implements ParticleEmitter {
 	}
 
 	/**
-	 * @see org.newdawn.slick.particles.ParticleEmitter#updateParticle(org.newdawn.slick.particles.Particle, int)
+	 * @see ParticleEmitter#updateParticle(Particle, int)
 	 */
 	public void updateParticle(Particle particle, int delta) {
 		if (particle.getLife() > 600) {
@@ -84,61 +84,61 @@ public class FireEmitter implements ParticleEmitter {
 	}
 
 	/**
-	 * @see org.newdawn.slick.particles.ParticleEmitter#isEnabled()
+	 * @see ParticleEmitter#isEnabled()
 	 */
 	public boolean isEnabled() {
 		return true;
 	}
 
 	/**
-	 * @see org.newdawn.slick.particles.ParticleEmitter#setEnabled(boolean)
+	 * @see ParticleEmitter#setEnabled(boolean)
 	 */
 	public void setEnabled(boolean enabled) {
 	}
 
 	/**
-	 * @see org.newdawn.slick.particles.ParticleEmitter#completed()
+	 * @see ParticleEmitter#completed()
 	 */
 	public boolean completed() {
 		return false;
 	}
 
 	/**
-	 * @see org.newdawn.slick.particles.ParticleEmitter#useAdditive()
+	 * @see ParticleEmitter#useAdditive()
 	 */
 	public boolean useAdditive() {
 		return false;
 	}
 
 	/**
-	 * @see org.newdawn.slick.particles.ParticleEmitter#getImage()
+	 * @see ParticleEmitter#getImage()
 	 */
 	public Image getImage() {
 		return null;
 	}
 
 	/**
-	 * @see org.newdawn.slick.particles.ParticleEmitter#usePoints(org.newdawn.slick.particles.ParticleSystem)
+	 * @see ParticleEmitter#usePoints(ParticleSystem)
 	 */
 	public boolean usePoints(ParticleSystem system) {
 		return false;
 	}
 
 	/**
-	 * @see org.newdawn.slick.particles.ParticleEmitter#isOriented()
+	 * @see ParticleEmitter#isOriented()
 	 */
 	public boolean isOriented() {
 		return false;
 	}
 
 	/**
-	 * @see org.newdawn.slick.particles.ParticleEmitter#wrapUp()
+	 * @see ParticleEmitter#wrapUp()
 	 */
 	public void wrapUp() {
 	}
 
 	/**
-	 * @see org.newdawn.slick.particles.ParticleEmitter#resetState()
+	 * @see ParticleEmitter#resetState()
 	 */
 	public void resetState() {
 	}

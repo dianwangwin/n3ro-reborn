@@ -242,14 +242,14 @@ public class Line extends Shape {
 	}
 
 	/**
-	 * @see org.newdawn.slick.geom.Shape#getX()
+	 * @see Shape#getX()
 	 */
 	public float getX() {
 		return getX1();
 	}
 
 	/**
-	 * @see org.newdawn.slick.geom.Shape#getY()
+	 * @see Shape#getY()
 	 */
 	public float getY() {
 		return getY1();
@@ -361,7 +361,7 @@ public class Line extends Shape {
 	}
 
 	/**
-	 * @see java.lang.Object#toString()
+	 * @see Object#toString()
 	 */
 	public String toString() {
 		return "[Line " + start + "," + end + "]";
@@ -440,7 +440,7 @@ public class Line extends Shape {
 	}
 
 	/**
-	 * @see org.newdawn.slick.geom.Shape#createPoints()
+	 * @see Shape#createPoints()
 	 */
 	protected void createPoints() {
 		points = new float[4];
@@ -451,7 +451,7 @@ public class Line extends Shape {
 	}
 
 	/**
-	 * @see org.newdawn.slick.geom.Shape#transform(org.newdawn.slick.geom.Transform)
+	 * @see Shape#transform(Transform)
 	 */
 	public Shape transform(Transform transform) {
 		float[] temp = new float[4];
@@ -462,14 +462,14 @@ public class Line extends Shape {
 	}
 
 	/**
-	 * @see org.newdawn.slick.geom.Shape#closed()
+	 * @see Shape#closed()
 	 */
 	public boolean closed() {
 		return false;
 	}
 	
 	/**
-	 * @see org.newdawn.slick.geom.Shape#intersects(org.newdawn.slick.geom.Shape)
+	 * @see Shape#intersects(Shape)
 	 */
 	public boolean intersects(Shape shape) 
     { 

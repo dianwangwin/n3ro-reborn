@@ -43,14 +43,14 @@ public class TransformTest2 extends BasicGame {
    }
    
    /**
-    * @see org.newdawn.slick.BasicGame#init(org.newdawn.slick.GameContainer)
+    * @see BasicGame#init(GameContainer)
     */
    public void init(GameContainer container) throws SlickException {
       container.setTargetFrameRate(100);
    }
 
    /**
-    * @see org.newdawn.slick.BasicGame#render(org.newdawn.slick.GameContainer, org.newdawn.slick.Graphics)
+    * @see BasicGame#render(GameContainer, Graphics)
     */
    public void render(GameContainer contiainer, Graphics g) {
       g.translate(320,240);
@@ -74,7 +74,7 @@ public class TransformTest2 extends BasicGame {
    }
 
    /**
-    * @see org.newdawn.slick.BasicGame#update(org.newdawn.slick.GameContainer, int)
+    * @see BasicGame#update(GameContainer, int)
     */
    public void update(GameContainer container, int delta) {
       if (scaleUp) {
@@ -101,7 +101,7 @@ public class TransformTest2 extends BasicGame {
    }
 
    /**
-    * @see org.newdawn.slick.BasicGame#keyPressed(int, char)
+    * @see BasicGame#keyPressed(int, char)
     */
    public void keyPressed(int key, char c) {
       if (key == Input.KEY_ESCAPE) {
@@ -129,7 +129,7 @@ public class TransformTest2 extends BasicGame {
    }
 
    /**
-    * @see org.newdawn.slick.BasicGame#keyReleased(int, char)
+    * @see BasicGame#keyReleased(int, char)
     */
    public void keyReleased(int key, char c) {
       if (key == Input.KEY_Q) {

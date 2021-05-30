@@ -26,7 +26,7 @@ public abstract class BasicGameState implements GameState {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.InputListener#setInput(org.newdawn.slick.Input)
+	 * @see org.newdawn.slick.InputListener#setInput(Input)
 	 */
 	public void setInput(Input input) {
 	}
@@ -38,7 +38,7 @@ public abstract class BasicGameState implements GameState {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.state.GameState#getID()
+	 * @see GameState#getID()
 	 */
 	public abstract int getID();
 
@@ -146,13 +146,13 @@ public abstract class BasicGameState implements GameState {
 	}
 
 	/**
-	 * @see org.newdawn.slick.state.GameState#enter(org.newdawn.slick.GameContainer, org.newdawn.slick.state.StateBasedGame)
+	 * @see GameState#enter(GameContainer, StateBasedGame)
 	 */
 	public void enter(GameContainer container, StateBasedGame game) throws SlickException {
 	}
 
 	/**
-	 * @see org.newdawn.slick.state.GameState#leave(org.newdawn.slick.GameContainer, org.newdawn.slick.state.StateBasedGame)
+	 * @see GameState#leave(GameContainer, StateBasedGame)
 	 */
 	public void leave(GameContainer container, StateBasedGame game) throws SlickException {
 	}

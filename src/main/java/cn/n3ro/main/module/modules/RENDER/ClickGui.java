@@ -3,6 +3,8 @@ package cn.n3ro.main.module.modules.RENDER;
 import cn.n3ro.main.module.Category;
 import cn.n3ro.main.module.Module;
 import cn.n3ro.main.module.modules.RENDER.GuiClick.GuiClickUI;
+import net.java.games.input.Controller;
+import org.lwjgl.input.Keyboard;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -16,6 +18,7 @@ public class ClickGui extends Module {
 
     public ClickGui() {
         super("ClickGui", Category.RENDER);
+        setKey(Keyboard.KEY_INSERT);
     }
 
     @Override

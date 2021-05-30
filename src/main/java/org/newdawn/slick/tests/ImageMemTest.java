@@ -22,7 +22,7 @@ public class ImageMemTest extends BasicGame {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.BasicGame#init(org.newdawn.slick.GameContainer)
+	 * @see BasicGame#init(GameContainer)
 	 */
 	public void init(GameContainer container) throws SlickException {
 		try {
@@ -37,13 +37,13 @@ public class ImageMemTest extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#render(org.newdawn.slick.GameContainer, org.newdawn.slick.Graphics)
+	 * @see BasicGame#render(GameContainer, Graphics)
 	 */
 	public void render(GameContainer container, Graphics g) {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#update(org.newdawn.slick.GameContainer, int)
+	 * @see BasicGame#update(GameContainer, int)
 	 */
 	public void update(GameContainer container, int delta) {
 	}

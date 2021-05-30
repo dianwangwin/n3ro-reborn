@@ -5,7 +5,7 @@ package org.newdawn.slick;
  * using the container system. There will be some utility type sub-classes as development
  * continues.
  * 
- * @see org.newdawn.slick.BasicGame
+ * @see BasicGame
  *
  * @author kevin
  */

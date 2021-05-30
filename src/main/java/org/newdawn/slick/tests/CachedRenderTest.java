@@ -31,7 +31,7 @@ public class CachedRenderTest extends BasicGame {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.BasicGame#init(org.newdawn.slick.GameContainer)
+	 * @see BasicGame#init(GameContainer)
 	 */
 	public void init(final GameContainer container) throws SlickException {
 		operations = new Runnable() {
@@ -48,7 +48,7 @@ public class CachedRenderTest extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#update(org.newdawn.slick.GameContainer, int)
+	 * @see BasicGame#update(GameContainer, int)
 	 */
 	public void update(GameContainer container, int delta) throws SlickException {
 		if (container.getInput().isKeyPressed(Input.KEY_SPACE)) {
@@ -57,7 +57,7 @@ public class CachedRenderTest extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.Game#render(org.newdawn.slick.GameContainer, org.newdawn.slick.Graphics)
+	 * @see org.newdawn.slick.Game#render(GameContainer, Graphics)
 	 */
 	public void render(GameContainer container, Graphics g) throws SlickException {
 		g.setColor(Color.white);

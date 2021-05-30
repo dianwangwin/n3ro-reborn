@@ -73,7 +73,7 @@ public class PBufferUniqueGraphics extends Graphics {
 	}
 
 	/**
-	 * @see org.newdawn.slick.Graphics#disable()
+	 * @see Graphics#disable()
 	 */
 	protected void disable() {
 		// Bind the texture after rendering.
@@ -92,7 +92,7 @@ public class PBufferUniqueGraphics extends Graphics {
 	}
 
 	/**
-	 * @see org.newdawn.slick.Graphics#enable()
+	 * @see Graphics#enable()
 	 */
 	protected void enable() {
 		SlickCallable.enterSafeBlock();
@@ -148,7 +148,7 @@ public class PBufferUniqueGraphics extends Graphics {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.Graphics#destroy()
+	 * @see Graphics#destroy()
 	 */
 	public void destroy() {
 		super.destroy();
@@ -157,7 +157,7 @@ public class PBufferUniqueGraphics extends Graphics {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.Graphics#flush()
+	 * @see Graphics#flush()
 	 */
 	public void flush() {
 		super.flush();

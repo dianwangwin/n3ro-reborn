@@ -245,7 +245,7 @@ public class GradientFill implements ShapeFill {
 	}
 
 	/**
-	 * @see org.newdawn.slick.ShapeFill#getOffsetAt(org.newdawn.slick.geom.Shape, float, float)
+	 * @see ShapeFill#getOffsetAt(Shape, float, float)
 	 */
 	public Vector2f getOffsetAt(Shape shape, float x, float y) {
 		return none;

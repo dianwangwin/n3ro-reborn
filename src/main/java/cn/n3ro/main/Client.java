@@ -1,6 +1,6 @@
 package cn.n3ro.main;
 
-import cn.n3ro.main.font.FontLoaders;
+import cn.n3ro.main.font.FontMgr;
 import cn.n3ro.main.management.CommandManager;
 import cn.n3ro.main.management.FileManager;
 import cn.n3ro.main.management.ModuleManager;
@@ -26,8 +26,12 @@ public class Client {
 
     public ModuleManager moduleManager;
     public CommandManager commandManager;
-    public FontLoaders fontLoaders;
+    public FontMgr fontLoaders;
     public FileManager fileManager;
+
+    public char[] chars = new char[65535]; //用于CJK字符的加载
+    public char[] ascii_chars = new char[256]; //用于ASCII字 符的加载
+
 
     public void log(String message) {
         String prefix = "[" + CLIENT_NAME + "] ";
@@ -35,7 +39,7 @@ public class Client {
     }
 
     public Client() {
-    	this.fileManager = new FileManager();
+        this.fileManager = new FileManager();
         FileManager.init();
         instance = this;
         initiated = true;
@@ -45,10 +49,17 @@ public class Client {
         } catch (NoSuchFieldException e) {
             runtimeobfuscationEnabled = false;
         }
+        for (int i = 0; i < chars.length; i++) {
+            chars[i] = (char) i;
+        }
+        for (int i = 0; i < ascii_chars.length; i++) {
+            ascii_chars[i] = (char) i;
+        }
+
         this.moduleManager = new ModuleManager();
         this.commandManager = new CommandManager();
-        this.fontLoaders = new FontLoaders();
-       // ConfigurationManager.instance();
+        this.fontLoaders = new FontMgr();
+        // ConfigurationManager.instance();
         LoggerUtils.info("ghost client init ");
     }
 

@@ -77,7 +77,7 @@ public class TestBox extends BasicGame {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.BasicGame#init(org.newdawn.slick.GameContainer)
+	 * @see BasicGame#init(GameContainer)
 	 */
 	public void init(GameContainer c) throws SlickException {
 		if (games.size() == 0) {
@@ -101,14 +101,14 @@ public class TestBox extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#update(org.newdawn.slick.GameContainer, int)
+	 * @see BasicGame#update(GameContainer, int)
 	 */
 	public void update(GameContainer container, int delta) throws SlickException {
 		currentGame.update(container, delta);
 	}
 
 	/**
-	 * @see org.newdawn.slick.Game#render(org.newdawn.slick.GameContainer, org.newdawn.slick.Graphics)
+	 * @see org.newdawn.slick.Game#render(GameContainer, Graphics)
 	 */
 	public void render(GameContainer container, Graphics g) throws SlickException {
 		SlickCallable.enterSafeBlock();
@@ -117,77 +117,77 @@ public class TestBox extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#controllerButtonPressed(int, int)
+	 * @see BasicGame#controllerButtonPressed(int, int)
 	 */
 	public void controllerButtonPressed(int controller, int button) {
 		currentGame.controllerButtonPressed(controller, button);
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#controllerButtonReleased(int, int)
+	 * @see BasicGame#controllerButtonReleased(int, int)
 	 */
 	public void controllerButtonReleased(int controller, int button) {
 		currentGame.controllerButtonReleased(controller, button);
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#controllerDownPressed(int)
+	 * @see BasicGame#controllerDownPressed(int)
 	 */
 	public void controllerDownPressed(int controller) {
 		currentGame.controllerDownPressed(controller);
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#controllerDownReleased(int)
+	 * @see BasicGame#controllerDownReleased(int)
 	 */
 	public void controllerDownReleased(int controller) {
 		currentGame.controllerDownReleased(controller);
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#controllerLeftPressed(int)
+	 * @see BasicGame#controllerLeftPressed(int)
 	 */
 	public void controllerLeftPressed(int controller) {
 		currentGame.controllerLeftPressed(controller);
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#controllerLeftReleased(int)
+	 * @see BasicGame#controllerLeftReleased(int)
 	 */
 	public void controllerLeftReleased(int controller) {
 		currentGame.controllerLeftReleased(controller);
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#controllerRightPressed(int)
+	 * @see BasicGame#controllerRightPressed(int)
 	 */
 	public void controllerRightPressed(int controller) {
 		currentGame.controllerRightPressed(controller);
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#controllerRightReleased(int)
+	 * @see BasicGame#controllerRightReleased(int)
 	 */
 	public void controllerRightReleased(int controller) {
 		currentGame.controllerRightReleased(controller);
 	}
 	
 	/**
-	 * @see org.newdawn.slick.BasicGame#controllerUpPressed(int)
+	 * @see BasicGame#controllerUpPressed(int)
 	 */
 	public void controllerUpPressed(int controller) {
 		currentGame.controllerUpPressed(controller);
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#controllerUpReleased(int)
+	 * @see BasicGame#controllerUpReleased(int)
 	 */
 	public void controllerUpReleased(int controller) {
 		currentGame.controllerUpReleased(controller);
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#keyPressed(int, char)
+	 * @see BasicGame#keyPressed(int, char)
 	 */
 	public void keyPressed(int key, char c) {
 		currentGame.keyPressed(key, c);
@@ -198,35 +198,35 @@ public class TestBox extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#keyReleased(int, char)
+	 * @see BasicGame#keyReleased(int, char)
 	 */
 	public void keyReleased(int key, char c) {
 		currentGame.keyReleased(key, c);
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#mouseMoved(int, int, int, int)
+	 * @see BasicGame#mouseMoved(int, int, int, int)
 	 */
 	public void mouseMoved(int oldx, int oldy, int newx, int newy) {
 		currentGame.mouseMoved(oldx, oldy, newx, newy);
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#mousePressed(int, int, int)
+	 * @see BasicGame#mousePressed(int, int, int)
 	 */
 	public void mousePressed(int button, int x, int y) {
 		currentGame.mousePressed(button, x, y);
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#mouseReleased(int, int, int)
+	 * @see BasicGame#mouseReleased(int, int, int)
 	 */
 	public void mouseReleased(int button, int x, int y) {
 		currentGame.mouseReleased(button, x, y);
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#mouseWheelMoved(int)
+	 * @see BasicGame#mouseWheelMoved(int)
 	 */
 	public void mouseWheelMoved(int change) {
 		currentGame.mouseWheelMoved(change);

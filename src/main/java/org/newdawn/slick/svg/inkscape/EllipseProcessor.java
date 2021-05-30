@@ -18,7 +18,7 @@ import org.w3c.dom.Element;
 public class EllipseProcessor implements ElementProcessor {
 	
 	/**
-	 * @see org.newdawn.slick.svg.inkscape.ElementProcessor#process(org.newdawn.slick.svg.Loader, org.w3c.dom.Element, org.newdawn.slick.svg.Diagram, org.newdawn.slick.geom.Transform)
+	 * @see ElementProcessor#process(Loader, Element, Diagram, Transform)
 	 */
 	public void process(Loader loader, Element element, Diagram diagram, Transform t) throws ParsingException {
 		Transform transform = Util.getTransform(element);
@@ -42,7 +42,7 @@ public class EllipseProcessor implements ElementProcessor {
 	}
 
 	/**
-	 * @see org.newdawn.slick.svg.inkscape.ElementProcessor#handles(org.w3c.dom.Element)
+	 * @see ElementProcessor#handles(Element)
 	 */
 	public boolean handles(Element element) {
 		if (element.getNodeName().equals("ellipse")) {

@@ -218,7 +218,7 @@ public class Rectangle extends Shape {
 	}
 	
 	/**
-	 * @see java.lang.Object#toString()
+	 * @see Object#toString()
 	 */
 	public String toString() {
 		return "[Rectangle "+width+"x"+height+"]";

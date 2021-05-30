@@ -31,13 +31,13 @@ public class UnicodeFontTest extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#init(org.newdawn.slick.GameContainer)
+	 * @see BasicGame#init(GameContainer)
 	 */
 	public void init(GameContainer container) throws SlickException {
 		container.setShowFPS(false);
 
 		// unicodeFont = new UnicodeFont(Font.decode("Arial Unicode MS"), 25, false, false);
-		unicodeFont = new UnicodeFont("c:/windows/fonts/arial.ttf", 48, false, false);
+		unicodeFont = new UnicodeFont("c:/windows/assets.cn.snowflake.rose.manager.fonts/arial.ttf", 48, false, false);
 //		unicodeFont.setPaddingBottom(10);
 //		unicodeFont.setPaddingRight(10);
 //		unicodeFont.setPaddingAdvanceX(-10);
@@ -54,7 +54,7 @@ public class UnicodeFontTest extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.Game#render(org.newdawn.slick.GameContainer, org.newdawn.slick.Graphics)
+	 * @see org.newdawn.slick.Game#render(GameContainer, Graphics)
 	 */
 	public void render(GameContainer container, Graphics g) {
 		g.setColor(Color.white);
@@ -76,7 +76,7 @@ public class UnicodeFontTest extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#update(org.newdawn.slick.GameContainer, int)
+	 * @see BasicGame#update(GameContainer, int)
 	 */
 	public void update (GameContainer container, int delta) throws SlickException {
 		unicodeFont.loadGlyphs(1);

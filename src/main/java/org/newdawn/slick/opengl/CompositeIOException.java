@@ -29,7 +29,7 @@ public class CompositeIOException extends IOException {
 	}
 	
 	/**
-	 * @see java.lang.Throwable#getMessage()
+	 * @see Throwable#getMessage()
 	 */
 	public String getMessage() {
 		String msg = "Composite Exception: \n";

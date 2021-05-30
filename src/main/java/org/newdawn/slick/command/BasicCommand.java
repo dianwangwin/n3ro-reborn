@@ -6,12 +6,6 @@ package org.newdawn.slick.command;
  * @author kevin
  */
 public class BasicCommand implements Command {
-	public static char[] var1;
-	public static String var2;
-	public static String var3;
-	public static String var4;
-	public static String var5;
-	public static String var6;
 	/** The name of the command */
 	private String name;
 	
@@ -34,14 +28,14 @@ public class BasicCommand implements Command {
 	}
 	
 	/**
-	 * @see java.lang.Object#hashCode()
+	 * @see Object#hashCode()
 	 */
 	public int hashCode() {
 		return name.hashCode();
 	}
 	
 	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
+	 * @see Object#equals(Object)
 	 */
 	public boolean equals(Object other) {
 		if (other instanceof BasicCommand) {
@@ -52,7 +46,7 @@ public class BasicCommand implements Command {
 	}
 	
 	/**
-	 * @see java.lang.Object#toString()
+	 * @see Object#toString()
 	 */
 	public String toString() {
 		return "[Command="+name+"]";

@@ -15,7 +15,7 @@ public class RenderEntityRendererHook implements Opcodes  {
     public static void transformRenderEntityRenderer(ClassNode classNode, MethodNode method) {
         if (method.name.equalsIgnoreCase("hurtCameraEffect") || method.name.equalsIgnoreCase("func_78482_e")){
             InsnList insnList = new InsnList();
-            insnList.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(MinecraftHook.class), "isNohurtcamEnable", "()Z", false));
+            insnList.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(RenderEntityRendererHook.class), "isNohurtcamEnable", "()Z", false));
             LabelNode labelNode = new LabelNode();
             insnList.add(new JumpInsnNode(Opcodes.IFEQ, labelNode));
             insnList.add(new InsnNode(Opcodes.RETURN));
@@ -28,7 +28,7 @@ public class RenderEntityRendererHook implements Opcodes  {
                 InsnList insnList2 = new InsnList();
 
                 InsnList insnList = new InsnList();
-                insnList.add(new MethodInsnNode(Opcodes.INVOKESTATIC,Type.getInternalName(MinecraftHook.class),"isViewClipEnabled","()Z",false));
+                insnList.add(new MethodInsnNode(Opcodes.INVOKESTATIC,Type.getInternalName(RenderEntityRendererHook.class),"isViewClipEnabled","()Z",false));
                 LabelNode labelNode = new LabelNode();
                 insnList.add(new JumpInsnNode(Opcodes.IFNE,labelNode));
                 method.instructions.insertBefore(ASMUtil.forward(target,8),insnList);
@@ -42,11 +42,13 @@ public class RenderEntityRendererHook implements Opcodes  {
 
     }
 
+    public static boolean isNohurtcamEnable(){
+        return NoHurtCam.no;
+    }
+
+
     public static boolean isViewClipEnabled() {
         return Objects.requireNonNull(ModuleManager.getModuleByName("ViewClip")).isEnable();
     }
 
-    public static boolean isNohurtcamEnable(){
-        return NoHurtCam.no;
-    }
 }

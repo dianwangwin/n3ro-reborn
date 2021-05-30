@@ -30,28 +30,28 @@ public abstract class BasicComponent extends AbstractComponent {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.gui.AbstractComponent#getHeight()
+	 * @see AbstractComponent#getHeight()
 	 */
 	public int getHeight() {
 		return height;
 	}
 
 	/**
-	 * @see org.newdawn.slick.gui.AbstractComponent#getWidth()
+	 * @see AbstractComponent#getWidth()
 	 */
 	public int getWidth() {
 		return width;
 	}
 
 	/**
-	 * @see org.newdawn.slick.gui.AbstractComponent#getX()
+	 * @see AbstractComponent#getX()
 	 */
 	public int getX() {
 		return x;
 	}
 
 	/**
-	 * @see org.newdawn.slick.gui.AbstractComponent#getY()
+	 * @see AbstractComponent#getY()
 	 */
 	public int getY() {
 		return y;
@@ -66,14 +66,14 @@ public abstract class BasicComponent extends AbstractComponent {
 	public abstract void renderImpl(GUIContext container, Graphics g);
 	
 	/**
-	 * @see org.newdawn.slick.gui.AbstractComponent#render(org.newdawn.slick.gui.GUIContext, org.newdawn.slick.Graphics)
+	 * @see AbstractComponent#render(GUIContext, Graphics)
 	 */
 	public void render(GUIContext container, Graphics g) throws SlickException {
 		renderImpl(container,g);
 	}
 
 	/**
-	 * @see org.newdawn.slick.gui.AbstractComponent#setLocation(int, int)
+	 * @see AbstractComponent#setLocation(int, int)
 	 */
 	public void setLocation(int x, int y) {
 		this.x = x;

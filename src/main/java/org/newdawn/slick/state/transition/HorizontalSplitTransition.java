@@ -47,21 +47,21 @@ public class HorizontalSplitTransition implements Transition {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.state.transition.Transition#init(org.newdawn.slick.state.GameState, org.newdawn.slick.state.GameState)
+	 * @see Transition#init(GameState, GameState)
 	 */
 	public void init(GameState firstState, GameState secondState) {
 		prev = secondState;
 	}
 
 	/**
-	 * @see org.newdawn.slick.state.transition.Transition#isComplete()
+	 * @see Transition#isComplete()
 	 */
 	public boolean isComplete() {
 		return finish;
 	}
 
 	/**
-	 * @see org.newdawn.slick.state.transition.Transition#postRender(org.newdawn.slick.state.StateBasedGame, org.newdawn.slick.GameContainer, org.newdawn.slick.Graphics)
+	 * @see Transition#postRender(StateBasedGame, GameContainer, Graphics)
 	 */
 	public void postRender(StateBasedGame game, GameContainer container, Graphics g) throws SlickException {
 		g.translate(-offset, 0);
@@ -93,14 +93,14 @@ public class HorizontalSplitTransition implements Transition {
 	}
 
 	/**
-	 * @see org.newdawn.slick.state.transition.Transition#preRender(org.newdawn.slick.state.StateBasedGame, org.newdawn.slick.GameContainer, org.newdawn.slick.Graphics)
+	 * @see Transition#preRender(StateBasedGame, GameContainer, Graphics)
 	 */
 	public void preRender(StateBasedGame game, GameContainer container,
 			Graphics g) throws SlickException {
 	}
 
 	/**
-	 * @see org.newdawn.slick.state.transition.Transition#update(org.newdawn.slick.state.StateBasedGame, org.newdawn.slick.GameContainer, int)
+	 * @see Transition#update(StateBasedGame, GameContainer, int)
 	 */
 	public void update(StateBasedGame game, GameContainer container, int delta)
 			throws SlickException {

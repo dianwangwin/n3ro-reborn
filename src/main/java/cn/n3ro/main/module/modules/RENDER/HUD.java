@@ -2,8 +2,8 @@ package cn.n3ro.main.module.modules.RENDER;
 
 import cn.n3ro.main.Client;
 import cn.n3ro.main.events.EventRender2D;
-import cn.n3ro.main.font.CFontRenderer;
-import cn.n3ro.main.font.FontLoaders;
+import cn.n3ro.main.font.FontMgr;
+import cn.n3ro.main.font.GlyphPageFontRenderer;
 import cn.n3ro.main.management.ModuleManager;
 import cn.n3ro.main.module.Category;
 import cn.n3ro.main.module.Module;
@@ -36,7 +36,7 @@ public class HUD extends Module {
     @EventTarget
     private void render2D(EventRender2D event) {
         ScaledResolution sr = new ScaledResolution(mc);
-        CFontRenderer font = FontLoaders.default20;
+        GlyphPageFontRenderer font = Client.instance.fontLoaders.simpleton20;
 
         if(hudTitle.getValue()) {
             int titlecolor;
@@ -48,7 +48,7 @@ public class HUD extends Module {
             String firstname = Client.CLIENT_NAME.substring(0, 1);
             String theothername = Client.CLIENT_NAME.substring(1);
             font.drawStringWithShadow(firstname, 3, 3, titlecolor);
-            font.drawStringWithShadow(theothername, 3 + font.getStringWidth(firstname) + 1.5, 3, -1);
+            font.drawStringWithShadow(theothername, (float) (3 + font.getStringWidth(firstname) + 1.5), 3, -1);
         }
 
         if(hudPosition.getValue()) {

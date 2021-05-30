@@ -338,14 +338,14 @@ public class BasicTriangulator implements Triangulator {
 		}
 		
 		/**
-		 * @see java.lang.Object#hashCode()
+		 * @see Object#hashCode()
 		 */
 		public int hashCode() {
 			return (int) (x * y * 31);
 		}
 		
 		/**
-		 * @see java.lang.Object#equals(java.lang.Object)
+		 * @see Object#equals(Object)
 		 */
 		public boolean equals(Object other) {
 			if (other instanceof Point) {
@@ -428,7 +428,7 @@ public class BasicTriangulator implements Triangulator {
 	}
 
 	/**
-	 * @see org.newdawn.slick.geom.Triangulator#startHole()
+	 * @see Triangulator#startHole()
 	 */
 	public void startHole() {
 		// TODO Auto-generated method stub

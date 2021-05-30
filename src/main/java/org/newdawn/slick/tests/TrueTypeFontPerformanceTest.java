@@ -20,7 +20,7 @@ import org.newdawn.slick.TrueTypeFont;
  */
 public class TrueTypeFontPerformanceTest extends BasicGame {
 	/** The java.awt font we're going to test */
-	private java.awt.Font awtFont;
+	private Font awtFont;
 	/** The True Type font we're going to use to render */
 	private TrueTypeFont font;
 
@@ -39,10 +39,10 @@ public class TrueTypeFontPerformanceTest extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.Game#init(org.newdawn.slick.GameContainer)
+	 * @see org.newdawn.slick.Game#init(GameContainer)
 	 */
 	public void init(GameContainer container) throws SlickException {
-		awtFont = new java.awt.Font("Verdana", Font.PLAIN, 16);
+		awtFont = new Font("Verdana", Font.PLAIN, 16);
 		font = new TrueTypeFont(awtFont, false);
 
 		for (int j = 0; j < 2; j++) {
@@ -59,8 +59,8 @@ public class TrueTypeFontPerformanceTest extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#render(org.newdawn.slick.GameContainer,
-	 *      org.newdawn.slick.Graphics)
+	 * @see BasicGame#render(GameContainer,
+	 *      Graphics)
 	 */
 	public void render(GameContainer container, Graphics g) {
 		g.setFont(font);
@@ -74,7 +74,7 @@ public class TrueTypeFontPerformanceTest extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#update(org.newdawn.slick.GameContainer,
+	 * @see BasicGame#update(GameContainer,
 	 *      int)
 	 */
 	public void update(GameContainer container, int delta)
@@ -82,7 +82,7 @@ public class TrueTypeFontPerformanceTest extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#keyPressed(int, char)
+	 * @see BasicGame#keyPressed(int, char)
 	 */
 	public void keyPressed(int key, char c) {
 		if (key == Input.KEY_ESCAPE) {

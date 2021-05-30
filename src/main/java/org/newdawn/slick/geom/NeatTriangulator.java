@@ -593,14 +593,14 @@ public class NeatTriangulator implements Triangulator
     }
 
 	/**
-	 * @see org.newdawn.slick.geom.Triangulator#getTriangleCount()
+	 * @see Triangulator#getTriangleCount()
 	 */
 	public int getTriangleCount() {
 		return numTriangles;
 	}
 
 	/**
-	 * @see org.newdawn.slick.geom.Triangulator#getTrianglePoint(int, int)
+	 * @see Triangulator#getTrianglePoint(int, int)
 	 */
 	public float[] getTrianglePoint(int tri, int i) {
 		float xp = pointsX[triangles[tri].v[i]];
@@ -610,7 +610,7 @@ public class NeatTriangulator implements Triangulator
 	}
 
 	/**
-	 * @see org.newdawn.slick.geom.Triangulator#startHole()
+	 * @see Triangulator#startHole()
 	 */
 	public void startHole() {
 	}

@@ -286,8 +286,8 @@ public class MouseOverArea extends AbstractComponent {
 	}
 
 	/**
-	 * @see org.newdawn.slick.gui.AbstractComponent#render(org.newdawn.slick.gui.GUIContext,
-	 *      org.newdawn.slick.Graphics)
+	 * @see AbstractComponent#render(GUIContext,
+	 *      Graphics)
 	 */
 	public void render(GUIContext container, Graphics g) {
 		if (currentImage != null) {
@@ -399,14 +399,14 @@ public class MouseOverArea extends AbstractComponent {
 	}
 
 	/**
-	 * @see org.newdawn.slick.gui.AbstractComponent#getHeight()
+	 * @see AbstractComponent#getHeight()
 	 */
 	public int getHeight() {
 		return (int) (area.getMaxY() - area.getY());
 	}
 
 	/**
-	 * @see org.newdawn.slick.gui.AbstractComponent#getWidth()
+	 * @see AbstractComponent#getWidth()
 	 */
 	public int getWidth() {
 		return (int) (area.getMaxX() - area.getX());

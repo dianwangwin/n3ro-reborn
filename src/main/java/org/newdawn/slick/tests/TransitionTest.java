@@ -45,7 +45,7 @@ public class TransitionTest extends StateBasedGame {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.state.StateBasedGame#initStatesList(org.newdawn.slick.GameContainer)
+	 * @see StateBasedGame#initStatesList(GameContainer)
 	 */
 	public void initStatesList(GameContainer container) throws SlickException {
 		addState(new ImageState(0, "testdata/wallpaper/paper1.png", 1));
@@ -109,21 +109,21 @@ public class TransitionTest extends StateBasedGame {
 		}
 
 		/**
-		 * @see org.newdawn.slick.state.BasicGameState#getID()
+		 * @see BasicGameState#getID()
 		 */
 		public int getID() {
 			return id;
 		}
 
 		/**
-		 * @see org.newdawn.slick.state.GameState#init(org.newdawn.slick.GameContainer, org.newdawn.slick.state.StateBasedGame)
+		 * @see org.newdawn.slick.state.GameState#init(GameContainer, StateBasedGame)
 		 */
 		public void init(GameContainer container, StateBasedGame game) throws SlickException {
 			image = new Image(ref);
 		}
 
 		/**
-		 * @see org.newdawn.slick.state.GameState#render(org.newdawn.slick.GameContainer, org.newdawn.slick.state.StateBasedGame, org.newdawn.slick.Graphics)
+		 * @see org.newdawn.slick.state.GameState#render(GameContainer, StateBasedGame, Graphics)
 		 */
 		public void render(GameContainer container, StateBasedGame game, Graphics g) throws SlickException {
 			image.draw(0,0,800,600);
@@ -132,7 +132,7 @@ public class TransitionTest extends StateBasedGame {
 		}
 
 		/**
-		 * @see org.newdawn.slick.state.GameState#update(org.newdawn.slick.GameContainer, org.newdawn.slick.state.StateBasedGame, int)
+		 * @see org.newdawn.slick.state.GameState#update(GameContainer, StateBasedGame, int)
 		 */
 		public void update(GameContainer container, StateBasedGame game, int delta) throws SlickException {
 			if (container.getInput().isKeyPressed(Input.KEY_SPACE)) {

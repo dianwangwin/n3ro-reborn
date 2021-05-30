@@ -47,7 +47,7 @@ public class AppletGameContainer extends Applet {
    protected boolean alphaSupport = true;
    
    /**
-    * @see java.applet.Applet#destroy()
+    * @see Applet#destroy()
     */
    public void destroy() {
       if (displayParent != null) {
@@ -72,7 +72,7 @@ public class AppletGameContainer extends Applet {
    }
 
    /**
-    * @see java.applet.Applet#start()
+    * @see Applet#start()
     */
    public void start() {
       
@@ -107,13 +107,13 @@ public class AppletGameContainer extends Applet {
    }
 
    /**
-    * @see java.applet.Applet#stop()
+    * @see Applet#stop()
     */
    public void stop() {
    }
 
    /**
-    * @see java.applet.Applet#init()
+    * @see Applet#init()
     */
    public void init() {
       removeAll();
@@ -290,14 +290,14 @@ public class AppletGameContainer extends Applet {
       }
 
       /**
-       * @see org.newdawn.slick.GameContainer#getScreenHeight()
+       * @see GameContainer#getScreenHeight()
        */
       public int getScreenHeight() {
          return 0;
       }
 
       /**
-       * @see org.newdawn.slick.GameContainer#getScreenWidth()
+       * @see GameContainer#getScreenWidth()
        */
       public int getScreenWidth() {
          return 0;
@@ -313,7 +313,7 @@ public class AppletGameContainer extends Applet {
       }
       
       /**
-       * @see org.newdawn.slick.GameContainer#hasFocus()
+       * @see GameContainer#hasFocus()
        */
       public boolean hasFocus() {
          return true;
@@ -328,28 +328,28 @@ public class AppletGameContainer extends Applet {
       }
       
       /**
-       * @see org.newdawn.slick.GameContainer#setIcon(java.lang.String)
+       * @see GameContainer#setIcon(String)
        */
       public void setIcon(String ref) throws SlickException {
          // unsupported in an applet
       }
 
       /**
-       * @see org.newdawn.slick.GameContainer#setMouseGrabbed(boolean)
+       * @see GameContainer#setMouseGrabbed(boolean)
        */
       public void setMouseGrabbed(boolean grabbed) {
          Mouse.setGrabbed(grabbed);
       }
 
 	  /**
-	   * @see org.newdawn.slick.GameContainer#isMouseGrabbed()
+	   * @see GameContainer#isMouseGrabbed()
 	   */
       public boolean isMouseGrabbed() {
     	  return Mouse.isGrabbed();
 	  }
       
       /**
-		 * @see org.newdawn.slick.GameContainer#setMouseCursor(java.lang.String,
+		 * @see GameContainer#setMouseCursor(String,
 		 *      int, int)
 		 */
       public void setMouseCursor(String ref, int hotSpotX, int hotSpotY) throws SlickException {
@@ -398,14 +398,14 @@ public class AppletGameContainer extends Applet {
        }
       
       /**
-       * @see org.newdawn.slick.GameContainer#setIcons(java.lang.String[])
+       * @see GameContainer#setIcons(String[])
        */
       public void setIcons(String[] refs) throws SlickException {
          // unsupported in an applet
       }
 
       /**
-       * @see org.newdawn.slick.GameContainer#setMouseCursor(org.newdawn.slick.opengl.ImageData, int, int)
+       * @see GameContainer#setMouseCursor(ImageData, int, int)
        */
       public void setMouseCursor(ImageData data, int hotSpotX, int hotSpotY) throws SlickException {
          try {
@@ -418,7 +418,7 @@ public class AppletGameContainer extends Applet {
       }
 
       /**
-       * @see org.newdawn.slick.GameContainer#setMouseCursor(org.lwjgl.input.Cursor, int, int)
+       * @see GameContainer#setMouseCursor(Cursor, int, int)
        */
       public void setMouseCursor(Cursor cursor, int hotSpotX, int hotSpotY) throws SlickException {
          try {
@@ -430,7 +430,7 @@ public class AppletGameContainer extends Applet {
       }
 
       /**
-       * @see org.newdawn.slick.GameContainer#setDefaultMouseCursor()
+       * @see GameContainer#setDefaultMouseCursor()
        */
       public void setDefaultMouseCursor() {
       }

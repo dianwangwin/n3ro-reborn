@@ -30,7 +30,7 @@ public class FlashTest extends BasicGame {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.BasicGame#init(org.newdawn.slick.GameContainer)
+	 * @see BasicGame#init(GameContainer)
 	 */
 	public void init(GameContainer container) throws SlickException {
 		this.container = container;
@@ -39,7 +39,7 @@ public class FlashTest extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#render(org.newdawn.slick.GameContainer, org.newdawn.slick.Graphics)
+	 * @see BasicGame#render(GameContainer, Graphics)
 	 */
 	public void render(GameContainer container, Graphics g) {
 		g.drawString("Press space to toggle",10,50);
@@ -51,7 +51,7 @@ public class FlashTest extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#update(org.newdawn.slick.GameContainer, int)
+	 * @see BasicGame#update(GameContainer, int)
 	 */
 	public void update(GameContainer container, int delta) {
 	}
@@ -72,7 +72,7 @@ public class FlashTest extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#keyPressed(int, char)
+	 * @see BasicGame#keyPressed(int, char)
 	 */
 	public void keyPressed(int key, char c) {
 		if (key == Input.KEY_SPACE) {

@@ -17,7 +17,7 @@ public class PlayerUtil {
         return false;
     }
 
-    public static void debug(String string) {
+    public static void debug(Object string) {
         if (string != null && mc.thePlayer != null )
             mc.thePlayer.addChatMessage(new ChatComponentText("§c[DEBUG] §r " + string));
     }

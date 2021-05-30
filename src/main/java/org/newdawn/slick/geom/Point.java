@@ -24,7 +24,7 @@ public class Point extends Shape
     } 
 
     /**
-     * @see org.newdawn.slick.geom.Shape#transform(org.newdawn.slick.geom.Transform)
+     * @see Shape#transform(Transform)
      */
     public Shape transform(Transform transform) 
     { 
@@ -35,7 +35,7 @@ public class Point extends Shape
     } 
 
     /**
-     * @see org.newdawn.slick.geom.Shape#createPoints()
+     * @see Shape#createPoints()
      */
     protected void createPoints() 
     { 
@@ -53,7 +53,7 @@ public class Point extends Shape
     } 
 
     /**
-     * @see org.newdawn.slick.geom.Shape#findCenter()
+     * @see Shape#findCenter()
      */
     protected void findCenter() 
     { 
@@ -63,7 +63,7 @@ public class Point extends Shape
     } 
 
     /**
-     * @see org.newdawn.slick.geom.Shape#calculateRadius()
+     * @see Shape#calculateRadius()
      */
     protected void calculateRadius() 
     { 

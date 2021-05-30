@@ -217,6 +217,4 @@ public class FontUtils {
 
 		return resultingXCoordinate;
 	}
-
-	
 }

@@ -145,21 +145,21 @@ public class CanvasGameContainer extends Canvas {
 		}
 
 		/**
-		 * @see org.newdawn.slick.GameContainer#running()
+		 * @see GameContainer#running()
 		 */
 		protected boolean running() {
 			return super.running() && CanvasGameContainer.this.isDisplayable();
 		}
 
 		/**
-		 * @see org.newdawn.slick.GameContainer#getHeight()
+		 * @see GameContainer#getHeight()
 		 */
 		public int getHeight() {
 			return CanvasGameContainer.this.getHeight();
 		}
 
 		/**
-		 * @see org.newdawn.slick.GameContainer#getWidth()
+		 * @see GameContainer#getWidth()
 		 */
 		public int getWidth() {
 			return CanvasGameContainer.this.getWidth();

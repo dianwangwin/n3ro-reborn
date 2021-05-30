@@ -55,7 +55,7 @@ public class LinearGradientFill implements TexCoordGenerator {
 	}
 
 	/**
-	 * @see org.newdawn.slick.geom.TexCoordGenerator#getCoordFor(float, float)
+	 * @see TexCoordGenerator#getCoordFor(float, float)
 	 */
 	public Vector2f getCoordFor(float x, float y) {
 		Vector2f result = new Vector2f();

@@ -50,7 +50,7 @@ public class QuadBasedLineStripRenderer implements LineStripRenderer {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.opengl.renderer.LineStripRenderer#start()
+	 * @see LineStripRenderer#start()
 	 */
 	public void start() {
 		if (width == 1) {
@@ -67,7 +67,7 @@ public class QuadBasedLineStripRenderer implements LineStripRenderer {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.opengl.renderer.LineStripRenderer#end()
+	 * @see LineStripRenderer#end()
 	 */
 	public void end() {
 		if (width == 1) {
@@ -79,7 +79,7 @@ public class QuadBasedLineStripRenderer implements LineStripRenderer {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.opengl.renderer.LineStripRenderer#vertex(float, float)
+	 * @see LineStripRenderer#vertex(float, float)
 	 */
 	public void vertex(float x, float y) {
 		if (width == 1) {
@@ -96,14 +96,14 @@ public class QuadBasedLineStripRenderer implements LineStripRenderer {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.opengl.renderer.LineStripRenderer#setWidth(float)
+	 * @see LineStripRenderer#setWidth(float)
 	 */
 	public void setWidth(float width) {
 		this.width = width;
 	}
 	
 	/**
-	 * @see org.newdawn.slick.opengl.renderer.LineStripRenderer#setAntiAlias(boolean)
+	 * @see LineStripRenderer#setAntiAlias(boolean)
 	 */
 	public void setAntiAlias(boolean antialias) {
 		def.setAntiAlias(antialias);
@@ -268,7 +268,7 @@ public class QuadBasedLineStripRenderer implements LineStripRenderer {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.opengl.renderer.LineStripRenderer#color(float, float, float, float)
+	 * @see LineStripRenderer#color(float, float, float, float)
 	 */
 	public void color(float r, float g, float b, float a) {
 		if (width == 1) {

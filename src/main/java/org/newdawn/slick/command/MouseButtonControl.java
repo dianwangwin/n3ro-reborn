@@ -19,7 +19,7 @@ public class MouseButtonControl implements Control {
     }
 
     /**
-     * @see java.lang.Object#equals(java.lang.Object)
+     * @see Object#equals(Object)
      */
     public boolean equals(Object o) {
         if (o instanceof MouseButtonControl) 
@@ -31,7 +31,7 @@ public class MouseButtonControl implements Control {
     }
     
     /**
-     * @see java.lang.Object#hashCode()
+     * @see Object#hashCode()
      */
     public int hashCode() {
         return button;

@@ -294,14 +294,14 @@ public class InputProvider {
 	 */
 	private class InputListenerImpl extends InputAdapter {
 		/**
-		 * @see org.newdawn.slick.util.InputAdapter#isAcceptingInput()
+		 * @see InputAdapter#isAcceptingInput()
 		 */
 		public boolean isAcceptingInput() {
 			return true;
 		}
 
 		/**
-		 * @see org.newdawn.slick.util.InputAdapter#keyPressed(int, char)
+		 * @see InputAdapter#keyPressed(int, char)
 		 */
 		public void keyPressed(int key, char c) {
 			Command command = (Command) commands.get(new KeyControl(key));
@@ -311,7 +311,7 @@ public class InputProvider {
 		}
 
 		/**
-		 * @see org.newdawn.slick.util.InputAdapter#keyReleased(int, char)
+		 * @see InputAdapter#keyReleased(int, char)
 		 */
 		public void keyReleased(int key, char c) {
 			Command command = (Command) commands.get(new KeyControl(key));
@@ -321,7 +321,7 @@ public class InputProvider {
 		}
 
 		/**
-		 * @see org.newdawn.slick.util.InputAdapter#mousePressed(int, int, int)
+		 * @see InputAdapter#mousePressed(int, int, int)
 		 */
 		public void mousePressed(int button, int x, int y) {
 			Command command = (Command) commands.get(new MouseButtonControl(
@@ -332,7 +332,7 @@ public class InputProvider {
 		}
 
 		/**
-		 * @see org.newdawn.slick.util.InputAdapter#mouseReleased(int, int, int)
+		 * @see InputAdapter#mouseReleased(int, int, int)
 		 */
 		public void mouseReleased(int button, int x, int y) {
 			Command command = (Command) commands.get(new MouseButtonControl(
@@ -343,7 +343,7 @@ public class InputProvider {
 		}
 
 		/**
-		 * @see org.newdawn.slick.util.InputAdapter#controllerLeftPressed(int)
+		 * @see InputAdapter#controllerLeftPressed(int)
 		 */
 		public void controllerLeftPressed(int controller) {
 			Command command = (Command) commands
@@ -355,7 +355,7 @@ public class InputProvider {
 		}
 
 		/**
-		 * @see org.newdawn.slick.util.InputAdapter#controllerLeftReleased(int)
+		 * @see InputAdapter#controllerLeftReleased(int)
 		 */
 		public void controllerLeftReleased(int controller) {
 			Command command = (Command) commands
@@ -367,7 +367,7 @@ public class InputProvider {
 		}
 
 		/**
-		 * @see org.newdawn.slick.util.InputAdapter#controllerRightPressed(int)
+		 * @see InputAdapter#controllerRightPressed(int)
 		 */
 		public void controllerRightPressed(int controller) {
 			Command command = (Command) commands
@@ -379,7 +379,7 @@ public class InputProvider {
 		}
 
 		/**
-		 * @see org.newdawn.slick.util.InputAdapter#controllerRightReleased(int)
+		 * @see InputAdapter#controllerRightReleased(int)
 		 */
 		public void controllerRightReleased(int controller) {
 			Command command = (Command) commands
@@ -391,7 +391,7 @@ public class InputProvider {
 		}
 
 		/**
-		 * @see org.newdawn.slick.util.InputAdapter#controllerUpPressed(int)
+		 * @see InputAdapter#controllerUpPressed(int)
 		 */
 		public void controllerUpPressed(int controller) {
 			Command command = (Command) commands
@@ -402,7 +402,7 @@ public class InputProvider {
 		}
 
 		/**
-		 * @see org.newdawn.slick.util.InputAdapter#controllerUpReleased(int)
+		 * @see InputAdapter#controllerUpReleased(int)
 		 */
 		public void controllerUpReleased(int controller) {
 			Command command = (Command) commands
@@ -414,7 +414,7 @@ public class InputProvider {
 		}
 
 		/**
-		 * @see org.newdawn.slick.util.InputAdapter#controllerDownPressed(int)
+		 * @see InputAdapter#controllerDownPressed(int)
 		 */
 		public void controllerDownPressed(int controller) {
 			Command command = (Command) commands
@@ -426,7 +426,7 @@ public class InputProvider {
 		}
 
 		/**
-		 * @see org.newdawn.slick.util.InputAdapter#controllerDownReleased(int)
+		 * @see InputAdapter#controllerDownReleased(int)
 		 */
 		public void controllerDownReleased(int controller) {
 			Command command = (Command) commands
@@ -438,7 +438,7 @@ public class InputProvider {
 		}
 
 		/**
-		 * @see org.newdawn.slick.util.InputAdapter#controllerButtonPressed(int,
+		 * @see InputAdapter#controllerButtonPressed(int,
 		 *      int)
 		 */
 		public void controllerButtonPressed(int controller, int button) {
@@ -450,7 +450,7 @@ public class InputProvider {
 		}
 
 		/**
-		 * @see org.newdawn.slick.util.InputAdapter#controllerButtonReleased(int,
+		 * @see InputAdapter#controllerButtonReleased(int,
 		 *      int)
 		 */
 		public void controllerButtonReleased(int controller, int button) {

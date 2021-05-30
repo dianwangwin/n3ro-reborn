@@ -34,7 +34,7 @@ public class FilterEffect implements Effect {
 	}
 
 	/**
-	 * @see org.newdawn.slick.font.effects.Effect#draw(java.awt.image.BufferedImage, java.awt.Graphics2D, org.newdawn.slick.UnicodeFont, org.newdawn.slick.font.Glyph)
+	 * @see Effect#draw(BufferedImage, Graphics2D, UnicodeFont, Glyph)
 	 */
 	public void draw(BufferedImage image, Graphics2D g, UnicodeFont unicodeFont, Glyph glyph) {
 		BufferedImage scratchImage = EffectUtil.getScratchImage();

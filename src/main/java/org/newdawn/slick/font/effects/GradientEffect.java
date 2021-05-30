@@ -49,7 +49,7 @@ public class GradientEffect implements ConfigurableEffect {
 	}
 
 	/**
-	 * @see org.newdawn.slick.font.effects.Effect#draw(java.awt.image.BufferedImage, java.awt.Graphics2D, org.newdawn.slick.UnicodeFont, org.newdawn.slick.font.Glyph)
+	 * @see Effect#draw(BufferedImage, Graphics2D, UnicodeFont, Glyph)
 	 */
 	public void draw(BufferedImage image, Graphics2D g, UnicodeFont unicodeFont, Glyph glyph) {
 		int ascent = unicodeFont.getAscent();
@@ -152,14 +152,14 @@ public class GradientEffect implements ConfigurableEffect {
 	}
 
 	/**
-	 * @see java.lang.Object#toString()
+	 * @see Object#toString()
 	 */
 	public String toString() {
 		return "Gradient";
 	}
 
 	/**
-	 * @see org.newdawn.slick.font.effects.ConfigurableEffect#getValues()
+	 * @see ConfigurableEffect#getValues()
 	 */
 	public List getValues() {
 		List values = new ArrayList();
@@ -174,7 +174,7 @@ public class GradientEffect implements ConfigurableEffect {
 	}
 
 	/**
-	 * @see org.newdawn.slick.font.effects.ConfigurableEffect#setValues(java.util.List)
+	 * @see ConfigurableEffect#setValues(List)
 	 */
 	public void setValues(List values) {
 		for (Iterator iter = values.iterator(); iter.hasNext();) {

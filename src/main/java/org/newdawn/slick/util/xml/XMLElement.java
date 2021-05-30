@@ -243,7 +243,7 @@ public class XMLElement {
 	}
 	
 	/**
-	 * @see java.lang.Object#toString()
+	 * @see Object#toString()
 	 */
 	public String toString() {
 		String value = "[XML "+getName();

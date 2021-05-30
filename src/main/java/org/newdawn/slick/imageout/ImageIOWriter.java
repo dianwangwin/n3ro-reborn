@@ -26,8 +26,8 @@ import org.newdawn.slick.Image;
  */
 public class ImageIOWriter implements ImageWriter {
 	/**
-	 * @see org.newdawn.slick.imageout.ImageWriter#saveImage(org.newdawn.slick.Image, 
-	 * java.lang.String, java.io.OutputStream, boolean)
+	 * @see ImageWriter#saveImage(Image,
+	 * String, OutputStream, boolean)
 	 */
 	public void saveImage(Image image, String format, OutputStream output, boolean hasAlpha)
 			throws IOException {

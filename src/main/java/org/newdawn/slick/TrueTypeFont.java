@@ -23,7 +23,7 @@ import org.newdawn.slick.util.BufferedImageUtil;
  * @author Kevin Glass (kevglass)
  * @author Peter Korzuszek (genail)
  */
-public class TrueTypeFont implements org.newdawn.slick.Font {
+public class TrueTypeFont implements Font {
 	/** The renderer to use for all GL operations */
 	private static final SGL GL = Renderer.get();
 

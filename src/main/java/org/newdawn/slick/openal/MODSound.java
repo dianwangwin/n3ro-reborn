@@ -1,6 +1,7 @@
 package org.newdawn.slick.openal;
 
-
+import ibxm.Module;
+import ibxm.OpenALMODPlayer;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,7 +17,10 @@ import org.lwjgl.openal.AL10;
  */
 public class MODSound extends AudioImpl {
 	/** The MOD play back system */
+	private static OpenALMODPlayer player = new OpenALMODPlayer();
 	
+	/** The module to play back */
+	private Module module;
 	/** The sound store this belongs to */
 	private SoundStore store;
 	
@@ -29,15 +33,17 @@ public class MODSound extends AudioImpl {
 	 */
 	public MODSound(SoundStore store, InputStream in) throws IOException {
 		this.store = store;
-		
+		module = OpenALMODPlayer.loadModule(in);
 	}
 	
 	/**
-	 * @see org.newdawn.slick.openal.AudioImpl#playAsMusic(float, float, boolean)
+	 * @see AudioImpl#playAsMusic(float, float, boolean)
 	 */
 	public int playAsMusic(float pitch, float gain, boolean loop) {
 		cleanUpSource();
 
+		player.play(module, store.getSource(0), loop, SoundStore.get().isMusicOn());
+		player.setup(pitch, 1.0f);
 		store.setCurrentMusicVolume(gain);
 		
 		store.setMOD(this);
@@ -66,32 +72,32 @@ public class MODSound extends AudioImpl {
 	 * Poll the streaming on the MOD
 	 */
 	public void poll() {
-		
+		player.update();
 	}
 	
 	/**
-	 * @see org.newdawn.slick.openal.AudioImpl#playAsSoundEffect(float, float, boolean)
+	 * @see AudioImpl#playAsSoundEffect(float, float, boolean)
 	 */
 	public int playAsSoundEffect(float pitch, float gain, boolean loop) {
 		return -1;
 	}
 
 	/**
-	 * @see org.newdawn.slick.openal.AudioImpl#stop()
+	 * @see AudioImpl#stop()
 	 */
 	public void stop() {
 		store.setMOD(null);
 	}
 
 	/**
-	 * @see org.newdawn.slick.openal.AudioImpl#getPosition()
+	 * @see AudioImpl#getPosition()
 	 */
 	public float getPosition() {
 		throw new RuntimeException("Positioning on modules is not currently supported");
 	}
 
 	/**
-	 * @see org.newdawn.slick.openal.AudioImpl#setPosition(float)
+	 * @see AudioImpl#setPosition(float)
 	 */
 	public boolean setPosition(float position) {
 		throw new RuntimeException("Positioning on modules is not currently supported");

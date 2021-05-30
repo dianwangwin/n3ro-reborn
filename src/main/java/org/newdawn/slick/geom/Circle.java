@@ -53,16 +53,6 @@ public strictfp class Circle extends Ellipse {
 	public float getCenterY() {
 		return getY() + radius;
 	}
-
-	/** 
-	 * Get the coordinates of the center of the circle
-	 * 
-	 * @return 2-element array with the center of the circle.
-	 */
-	@Override
-	public float[] getCenter() {
-		return new float[] { getCenterX(), getCenterY() };
-	}
 	
 	/**
 	 * Set the radius of this circle
@@ -128,8 +118,7 @@ public strictfp class Circle extends Ellipse {
 	 */
     public boolean contains(float x, float y) 
     { 
-        float xDelta = x - getCenterX(), yDelta = y - getCenterY();
-        return xDelta * xDelta + yDelta * yDelta < getRadius() * getRadius();
+        return (x - getX()) * (x - getX()) + (y - getY()) * (y - getY()) < getRadius() * getRadius(); 
     }
     
     /**
@@ -142,7 +131,7 @@ public strictfp class Circle extends Ellipse {
     }
     
 	/**
-	 * @see org.newdawn.slick.geom.Ellipse#findCenter()
+	 * @see Ellipse#findCenter()
 	 */
     protected void findCenter() {
         center = new float[2];
@@ -151,7 +140,7 @@ public strictfp class Circle extends Ellipse {
     }
 
     /**
-     * @see org.newdawn.slick.geom.Ellipse#calculateRadius()
+     * @see Ellipse#calculateRadius()
      */
     protected void calculateRadius() {
         boundingCircleRadius = radius;

@@ -23,7 +23,7 @@ public class StateBasedTest extends StateBasedGame {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.state.StateBasedGame#initStatesList(org.newdawn.slick.GameContainer)
+	 * @see StateBasedGame#initStatesList(GameContainer)
 	 */
 	public void initStatesList(GameContainer container) {
 		addState(new TestState1());

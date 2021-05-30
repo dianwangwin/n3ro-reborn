@@ -203,7 +203,7 @@ public class ConfigurableEmitter implements ParticleEmitter {
 	}
 
 	/**
-	 * @see java.lang.Object#toString()
+	 * @see Object#toString()
 	 */
 	public String toString() {
 		return "[" + name + "]";
@@ -260,21 +260,21 @@ public class ConfigurableEmitter implements ParticleEmitter {
 	}
 
 	/**
-	 * @see org.newdawn.slick.particles.ParticleEmitter#isEnabled()
+	 * @see ParticleEmitter#isEnabled()
 	 */
 	public boolean isEnabled() {
 		return enabled;
 	}
 
 	/**
-	 * @see org.newdawn.slick.particles.ParticleEmitter#setEnabled(boolean)
+	 * @see ParticleEmitter#setEnabled(boolean)
 	 */
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
 	}
 
 	/**
-	 * @see org.newdawn.slick.particles.ParticleEmitter#update(org.newdawn.slick.particles.ParticleSystem,
+	 * @see ParticleEmitter#update(ParticleSystem,
 	 *      int)
 	 */
 	public void update(ParticleSystem system, int delta) {
@@ -369,7 +369,7 @@ public class ConfigurableEmitter implements ParticleEmitter {
 	}
 
 	/**
-	 * @see org.newdawn.slick.particles.ParticleEmitter#updateParticle(org.newdawn.slick.particles.Particle,
+	 * @see ParticleEmitter#updateParticle(Particle,
 	 *      int)
 	 */
 	public void updateParticle(Particle particle, int delta) {

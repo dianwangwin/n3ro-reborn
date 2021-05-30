@@ -11,14 +11,14 @@ public class DefaultLineStripRenderer implements LineStripRenderer {
 	private SGL GL = Renderer.get();
 	
 	/**
-	 * @see org.newdawn.slick.opengl.renderer.LineStripRenderer#end()
+	 * @see LineStripRenderer#end()
 	 */
 	public void end() {
 		GL.glEnd();
 	}
 
 	/**
-	 * @see org.newdawn.slick.opengl.renderer.LineStripRenderer#setAntiAlias(boolean)
+	 * @see LineStripRenderer#setAntiAlias(boolean)
 	 */
 	public void setAntiAlias(boolean antialias) {
 		if (antialias) {
@@ -29,41 +29,41 @@ public class DefaultLineStripRenderer implements LineStripRenderer {
 	}
 
 	/**
-	 * @see org.newdawn.slick.opengl.renderer.LineStripRenderer#setWidth(float)
+	 * @see LineStripRenderer#setWidth(float)
 	 */
 	public void setWidth(float width) {
 		GL.glLineWidth(width);
 	}
 
 	/**
-	 * @see org.newdawn.slick.opengl.renderer.LineStripRenderer#start()
+	 * @see LineStripRenderer#start()
 	 */
 	public void start() {
 		GL.glBegin(SGL.GL_LINE_STRIP);
 	}
 
 	/**
-	 * @see org.newdawn.slick.opengl.renderer.LineStripRenderer#vertex(float, float)
+	 * @see LineStripRenderer#vertex(float, float)
 	 */
 	public void vertex(float x, float y) {
 		GL.glVertex2f(x,y);
 	}
 
 	/**
-	 * @see org.newdawn.slick.opengl.renderer.LineStripRenderer#color(float, float, float, float)
+	 * @see LineStripRenderer#color(float, float, float, float)
 	 */
 	public void color(float r, float g, float b, float a) {
 		GL.glColor4f(r, g, b, a);
 	}
 
 	/**
-	 * @see org.newdawn.slick.opengl.renderer.LineStripRenderer#setLineCaps(boolean)
+	 * @see LineStripRenderer#setLineCaps(boolean)
 	 */
 	public void setLineCaps(boolean caps) {
 	}
 
 	/**
-	 * @see org.newdawn.slick.opengl.renderer.LineStripRenderer#applyGLLineFixes()
+	 * @see LineStripRenderer#applyGLLineFixes()
 	 */
 	public boolean applyGLLineFixes() {
 		return true;

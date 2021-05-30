@@ -31,7 +31,7 @@ public class BigSpriteSheetTest extends BasicGame {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.BasicGame#init(org.newdawn.slick.GameContainer)
+	 * @see BasicGame#init(GameContainer)
 	 */
 	public void init(GameContainer container) throws SlickException {
 		original = new BigImage("testdata/bigimage.tga", Image.FILTER_NEAREST, 256);
@@ -39,7 +39,7 @@ public class BigSpriteSheetTest extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#render(org.newdawn.slick.GameContainer, org.newdawn.slick.Graphics)
+	 * @see BasicGame#render(GameContainer, Graphics)
 	 */
 	public void render(GameContainer container, Graphics g) {
 		if (oldMethod) {
@@ -79,7 +79,7 @@ public class BigSpriteSheetTest extends BasicGame {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#update(org.newdawn.slick.GameContainer, int)
+	 * @see BasicGame#update(GameContainer, int)
 	 */
 	public void update(GameContainer container, int delta) throws SlickException {
 		if (container.getInput().isKeyPressed(Input.KEY_SPACE)) {

@@ -219,8 +219,8 @@ public class TextField extends AbstractComponent {
 	}
 
 	/**
-	 * @see org.newdawn.slick.gui.AbstractComponent#render(org.newdawn.slick.gui.GUIContext,
-	 *      org.newdawn.slick.Graphics)
+	 * @see AbstractComponent#render(GUIContext,
+	 *      Graphics)
 	 */
 	public void render(GUIContext container, Graphics g) {
 		if (lastKey != -1) {
@@ -365,7 +365,7 @@ public class TextField extends AbstractComponent {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.gui.AbstractComponent#keyPressed(int, char)
+	 * @see AbstractComponent#keyPressed(int, char)
 	 */
 	public void keyPressed(int key, char c) {
 		if (hasFocus()) {
@@ -466,7 +466,7 @@ public class TextField extends AbstractComponent {
 	}
 
 	/**
-	 * @see org.newdawn.slick.gui.AbstractComponent#setFocus(boolean)
+	 * @see AbstractComponent#setFocus(boolean)
 	 */
 	public void setFocus(boolean focus) {
 		lastKey = -1;

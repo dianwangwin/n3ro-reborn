@@ -201,7 +201,7 @@ public class AppGameContainer extends GameContainer {
 	}
 
 	/**
-	 * @see org.newdawn.slick.GameContainer#setMouseCursor(java.lang.String, int, int)
+	 * @see GameContainer#setMouseCursor(String, int, int)
 	 */
 	public void setMouseCursor(String ref, int hotSpotX, int hotSpotY) throws SlickException {
 		try {
@@ -214,7 +214,7 @@ public class AppGameContainer extends GameContainer {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.GameContainer#setMouseCursor(org.newdawn.slick.opengl.ImageData, int, int)
+	 * @see GameContainer#setMouseCursor(ImageData, int, int)
 	 */
 	public void setMouseCursor(ImageData data, int hotSpotX, int hotSpotY) throws SlickException {
 		try {
@@ -227,7 +227,7 @@ public class AppGameContainer extends GameContainer {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.GameContainer#setMouseCursor(org.lwjgl.input.Cursor, int, int)
+	 * @see GameContainer#setMouseCursor(Cursor, int, int)
 	 */
 	public void setMouseCursor(Cursor cursor, int hotSpotX, int hotSpotY) throws SlickException {
 		try {
@@ -253,7 +253,7 @@ public class AppGameContainer extends GameContainer {
     }
     
 	/**
-	 * @see org.newdawn.slick.GameContainer#setMouseCursor(org.newdawn.slick.Image, int, int)
+	 * @see GameContainer#setMouseCursor(Image, int, int)
 	 */
 	public void setMouseCursor(Image image, int hotSpotX, int hotSpotY) throws SlickException {
 		try {
@@ -274,7 +274,7 @@ public class AppGameContainer extends GameContainer {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.GameContainer#reinit()
+	 * @see GameContainer#reinit()
 	 */
 	public void reinit() throws SlickException {
 		InternalTextureLoader.get().clear();
@@ -428,42 +428,42 @@ public class AppGameContainer extends GameContainer {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.GameContainer#setUpdateOnlyWhenVisible(boolean)
+	 * @see GameContainer#setUpdateOnlyWhenVisible(boolean)
 	 */
 	public void setUpdateOnlyWhenVisible(boolean updateOnlyWhenVisible) {
 		updateOnlyOnVisible = updateOnlyWhenVisible;
 	}
 	
 	/**
-	 * @see org.newdawn.slick.GameContainer#isUpdatingOnlyWhenVisible()
+	 * @see GameContainer#isUpdatingOnlyWhenVisible()
 	 */
 	public boolean isUpdatingOnlyWhenVisible() {
 		return updateOnlyOnVisible;
 	}
 	
 	/**
-	 * @see org.newdawn.slick.GameContainer#setIcon(java.lang.String)
+	 * @see GameContainer#setIcon(String)
 	 */
 	public void setIcon(String ref) throws SlickException {
 		setIcons(new String[] {ref});
 	}
 
 	/**
-	 * @see org.newdawn.slick.GameContainer#setMouseGrabbed(boolean)
+	 * @see GameContainer#setMouseGrabbed(boolean)
 	 */
 	public void setMouseGrabbed(boolean grabbed) {
 		Mouse.setGrabbed(grabbed);
 	}
 
 	/**
-	 * @see org.newdawn.slick.GameContainer#isMouseGrabbed()
+	 * @see GameContainer#isMouseGrabbed()
 	 */
 	public boolean isMouseGrabbed() {
 		return Mouse.isGrabbed();
 	}
 	
 	/**
-	 * @see org.newdawn.slick.GameContainer#hasFocus()
+	 * @see GameContainer#hasFocus()
 	 */
 	public boolean hasFocus() {
 		// hmm, not really the right thing, talk to the LWJGL guys
@@ -471,14 +471,14 @@ public class AppGameContainer extends GameContainer {
 	}
 
 	/**
-	 * @see org.newdawn.slick.GameContainer#getScreenHeight()
+	 * @see GameContainer#getScreenHeight()
 	 */
 	public int getScreenHeight() {
 		return originalDisplayMode.getHeight();
 	}
 
 	/**
-	 * @see org.newdawn.slick.GameContainer#getScreenWidth()
+	 * @see GameContainer#getScreenWidth()
 	 */
 	public int getScreenWidth() {
 		return originalDisplayMode.getWidth();
@@ -499,7 +499,7 @@ public class AppGameContainer extends GameContainer {
 	 */
 	private class NullOutputStream extends OutputStream {
 		/**
-		 * @see java.io.OutputStream#write(int)
+		 * @see OutputStream#write(int)
 		 */
 		public void write(int b) throws IOException {
 			// null implemetnation
@@ -508,7 +508,7 @@ public class AppGameContainer extends GameContainer {
 	}
 
 	/**
-	 * @see org.newdawn.slick.GameContainer#setIcons(java.lang.String[])
+	 * @see GameContainer#setIcons(String[])
 	 */
 	public void setIcons(String[] refs) throws SlickException {
 		ByteBuffer[] bufs = new ByteBuffer[refs.length];
@@ -535,7 +535,7 @@ public class AppGameContainer extends GameContainer {
 	}
 
 	/**
-	 * @see org.newdawn.slick.GameContainer#setDefaultMouseCursor()
+	 * @see GameContainer#setDefaultMouseCursor()
 	 */
 	public void setDefaultMouseCursor() {
 		try {

@@ -29,14 +29,14 @@ public class TestState1 extends BasicGameState {
 	private StateBasedGame game;
 
 	/**
-	 * @see org.newdawn.slick.state.BasicGameState#getID()
+	 * @see BasicGameState#getID()
 	 */
 	public int getID() {
 		return ID;
 	}
 
 	/**
-	 * @see org.newdawn.slick.state.BasicGameState#init(org.newdawn.slick.GameContainer, org.newdawn.slick.state.StateBasedGame)
+	 * @see BasicGameState#init(GameContainer, StateBasedGame)
 	 */
 	public void init(GameContainer container, StateBasedGame game) throws SlickException {
 		this.game = game;
@@ -44,7 +44,7 @@ public class TestState1 extends BasicGameState {
 	}
 
 	/**
-	 * @see org.newdawn.slick.state.BasicGameState#render(org.newdawn.slick.GameContainer, org.newdawn.slick.state.StateBasedGame, org.newdawn.slick.Graphics)
+	 * @see BasicGameState#render(GameContainer, StateBasedGame, Graphics)
 	 */
 	public void render(GameContainer container, StateBasedGame game, Graphics g) {
 		g.setFont(font);
@@ -56,13 +56,13 @@ public class TestState1 extends BasicGameState {
 	}
 
 	/**
-	 * @see org.newdawn.slick.state.BasicGameState#update(org.newdawn.slick.GameContainer, org.newdawn.slick.state.StateBasedGame, int)
+	 * @see BasicGameState#update(GameContainer, StateBasedGame, int)
 	 */
 	public void update(GameContainer container, StateBasedGame game, int delta) {
 	}
 
 	/**
-	 * @see org.newdawn.slick.state.BasicGameState#keyReleased(int, char)
+	 * @see BasicGameState#keyReleased(int, char)
 	 */
 	public void keyReleased(int key, char c) {
 		

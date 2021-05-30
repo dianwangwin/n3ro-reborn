@@ -26,7 +26,7 @@ public class TGAWriter implements ImageWriter {
 	}
 
 	/**
-	 * @see org.newdawn.slick.imageout.ImageWriter#saveImage(org.newdawn.slick.Image, java.lang.String, java.io.OutputStream, boolean)
+	 * @see ImageWriter#saveImage(Image, String, OutputStream, boolean)
 	 */
 	public void saveImage(Image image, String format, OutputStream output, boolean writeAlpha) throws IOException {
 		DataOutputStream out = new DataOutputStream(new BufferedOutputStream(output));

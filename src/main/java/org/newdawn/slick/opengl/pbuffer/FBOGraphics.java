@@ -133,7 +133,7 @@ public class FBOGraphics extends Graphics {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.Graphics#disable()
+	 * @see Graphics#disable()
 	 */
 	protected void disable() {
 		GL.flush();
@@ -151,7 +151,7 @@ public class FBOGraphics extends Graphics {
 	}
 
 	/**
-	 * @see org.newdawn.slick.Graphics#enable()
+	 * @see Graphics#enable()
 	 */
 	protected void enable() {
 		if (!valid) {
@@ -203,7 +203,7 @@ public class FBOGraphics extends Graphics {
 	}
 	
 	/**
-	 * @see org.newdawn.slick.Graphics#destroy()
+	 * @see Graphics#destroy()
 	 */
 	public void destroy() {
 		super.destroy();
@@ -217,7 +217,7 @@ public class FBOGraphics extends Graphics {
 	}
 
 	/**
-	 * @see org.newdawn.slick.Graphics#flush()
+	 * @see Graphics#flush()
 	 */
 	public void flush() {
 		super.flush();

@@ -22,7 +22,7 @@ public class SpriteSheetFontTest extends BasicGame {
    }
 
    /**
-    * @see org.newdawn.slick.Game#init(org.newdawn.slick.GameContainer)
+    * @see Game#init(GameContainer)
     */
    public void init(GameContainer container) throws SlickException {
       SpriteSheet sheet = new SpriteSheet("testdata/spriteSheetFont.png", 32, 32);
@@ -30,7 +30,7 @@ public class SpriteSheetFontTest extends BasicGame {
    }
 
    /**
-    * @see org.newdawn.slick.BasicGame#render(org.newdawn.slick.GameContainer,org.newdawn.slick.Graphics)
+    * @see BasicGame#render(GameContainer, Graphics)
     */
    public void render(GameContainer container, Graphics g) {
       g.setBackground(Color.gray);
@@ -39,13 +39,13 @@ public class SpriteSheetFontTest extends BasicGame {
    }
 
    /**
-    * @see org.newdawn.slick.BasicGame#update(org.newdawn.slick.GameContainer,int)
+    * @see BasicGame#update(GameContainer,int)
     */
    public void update(GameContainer container, int delta) throws SlickException {
    }
 
    /**
-    * @see org.newdawn.slick.BasicGame#keyPressed(int, char)
+    * @see BasicGame#keyPressed(int, char)
     */
    public void keyPressed(int key, char c) {
       if (key == Input.KEY_ESCAPE) {

@@ -20,8 +20,8 @@ import org.newdawn.slick.util.Log;
 public class FileMuffin implements Muffin {
 
 	/**
-	 * @see org.newdawn.slick.muffin.Muffin#saveFile(java.util.HashMap,
-	 *      java.lang.String)
+	 * @see Muffin#saveFile(HashMap,
+	 *      String)
 	 */
 	public void saveFile(HashMap scoreMap, String fileName) throws IOException {
 		String userHome = System.getProperty("user.home");
@@ -42,7 +42,7 @@ public class FileMuffin implements Muffin {
 	}
 
 	/**
-	 * @see org.newdawn.slick.muffin.Muffin#loadFile(java.lang.String)
+	 * @see Muffin#loadFile(String)
 	 */
 	public HashMap loadFile(String fileName) throws IOException {
 		HashMap hashMap = new HashMap();

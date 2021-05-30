@@ -30,14 +30,14 @@ public class MinecraftHook {
             AbstractInsnNode insn = iter.next();
             if (insn.getOpcode() == Opcodes.INVOKEVIRTUAL) {
                 MethodInsnNode methodInsn = (MethodInsnNode) insn;
-                if (methodInsn.name.equals("func_71407_l") || methodInsn.name.equals("runTick")) {
+                if (methodInsn.name.equals("runTick") || methodInsn.name.equals("func_71407_l")) {
                     method.instructions.insert(insn, new MethodInsnNode(Opcodes.INVOKESTATIC,//opcodes invoke static method
                             Type.getInternalName(MinecraftHook.class), //method ownner
                             "hookRunTick", //method name
                             "()V", //method desc
                             false));
                 }
-                if (methodInsn.name.equals("dispatchKeypresses") | method.name.equalsIgnoreCase("func_152348_aa")) {
+                if (methodInsn.name.equalsIgnoreCase("dispatchKeypresses") | method.name.equalsIgnoreCase("func_152348_aa")) {
                     method.instructions.insert(insn, new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(MinecraftHook.class), "hookKeyHandler", "()V", false));
                 }
               
@@ -106,16 +106,5 @@ public class MinecraftHook {
 //    public static void getBlockReachDistance() {
 //    	System.out.println("asd111");
 //    }
-    public static void chamsHook1(Object object){
-        if (Client.instance.moduleManager.getModuleByName("Chams").isEnable() && object instanceof EntityPlayer){
-            GL11.glEnable(GL11.GL_POLYGON_OFFSET_FILL);
-            GL11.glPolygonOffset(1.0F, -2000000F);
-        }
-    }
-    public static void chamsHook2(Object object){
-        if (Client.instance.moduleManager.getModuleByName("Chams").isEnable() && object instanceof EntityPlayer){
-            GL11.glPolygonOffset(1.0F, 2000000F);
-            GL11.glDisable(GL11.GL_POLYGON_OFFSET_FILL);
-        }
-    }
+
 }

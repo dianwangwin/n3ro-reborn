@@ -173,7 +173,7 @@ public abstract class AbstractComponent extends InputAdapter {
 	/**
 	 * Gives the focus to this component with a click of the mouse.
 	 * 
-	 * @see org.newdawn.slick.gui.AbstractComponent#mouseReleased(int, int, int)
+	 * @see AbstractComponent#mouseReleased(int, int, int)
 	 */
 	public void mouseReleased(int button, int x, int y) {
 		setFocus(Rectangle.contains(x, y, getX(), getY(), getWidth(),

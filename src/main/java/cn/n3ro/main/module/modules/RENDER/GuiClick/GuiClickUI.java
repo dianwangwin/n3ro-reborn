@@ -7,8 +7,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import cn.n3ro.main.Client;
-import cn.n3ro.main.font.CFontRenderer;
-import cn.n3ro.main.font.FontLoaders;
+import cn.n3ro.main.font.GlyphPageFontRenderer;
 import cn.n3ro.main.module.Category;
 import cn.n3ro.main.module.Module;
 import cn.n3ro.main.module.modules.RENDER.ClickGui;
@@ -57,9 +56,11 @@ public class GuiClickUI extends GuiScreen {
         return false;
     }
 
-    CFontRenderer font1 =  FontLoaders.default18;
-    CFontRenderer font2 =  FontLoaders.default16;
-    CFontRenderer font3 = FontLoaders.default14;
+    GlyphPageFontRenderer font = Client.instance.fontLoaders.simpleton18;
+    GlyphPageFontRenderer font2 =  Client.instance.fontLoaders.simpleton16;
+    GlyphPageFontRenderer font3 =  Client.instance.fontLoaders.simpleton14;
+    GlyphPageFontRenderer font4 = Client.instance.fontLoaders.simpleton30;
+    GlyphPageFontRenderer font5 = Client.instance.fontLoaders.simpleton20;
 
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
@@ -79,7 +80,7 @@ public class GuiClickUI extends GuiScreen {
         RenderUtil.drawBorderedRect(x + 2, y + 2, x + 273 - 2, y + 198 - 2, 1, getColor(),
                 new Color(20, 20, 20).getRGB());
         Gui.drawRect(x + 70, y + 35, x + 269, y + 195, new Color(0, 0, 0).getRGB());
-        FontLoaders.default30.drawStringWithShadow(Client.CLIENT_NAME, x + 10, y + 8, new Color(180, 180, 180).getRGB());
+        font4.drawStringWithShadow(Client.CLIENT_NAME, x + 10, y + 8, new Color(180, 180, 180).getRGB());
         font2.drawStringWithShadow(Client.CLIENT_VERSION, x + 12, y + 24, new Color(180, 180, 180).getRGB());
 
         RenderUtil.drawGradientSideways(x + 70, y + 35, x + 80, y + 195, new Color(20, 20, 20).getRGB(),
@@ -90,7 +91,7 @@ public class GuiClickUI extends GuiScreen {
             int strX = x + 40;
             int strY = y + 55 + cateY;
             boolean hover = mouseX > x + 5 && mouseX < x + 65 && mouseY > strY && mouseY < strY + 20;
-            FontLoaders.default20.drawCenteredStringWithShadow(category.name().substring(0,1).toUpperCase() + category.name().substring(1).toLowerCase(), strX - 1, strY + 6,
+            font5.drawCenteredStringOutline(category.name().substring(0,1).toUpperCase() + category.name().substring(1).toLowerCase(), strX - 1, strY + 6,
                     (category == currentCategory) ? getColor()
                             : new Color(hover ? 255 : 140, hover ? 255 : 140, hover ? 255 : 140).getRGB());
             cateY += 20;
@@ -105,7 +106,7 @@ public class GuiClickUI extends GuiScreen {
                 continue;
             RenderUtil.drawRoundRect(startX, startY + moduleY, startX + length, startY + moduleY + 24, 3,
                     new Color(20, 20, 20).getRGB());
-            font1.drawStringWithShadow(m.getName(), startX + 8, startY + 9 + moduleY, -1);
+            font.drawStringWithShadow(m.getName(), startX + 8, startY + 9 + moduleY, -1);
             RenderUtil.drawRoundRect(startX + length - 25, startY + moduleY + 7, startX + length - 5,
                     startY + moduleY + 17, 5, new Color(0, 0, 0).getRGB());
             boolean onToggleButton = mouseX > startX + length - 25 && mouseX < startX + length - 5
@@ -134,7 +135,7 @@ public class GuiClickUI extends GuiScreen {
                         RenderUtil.drawRoundRect(startX + length - 85, startY + valueY - 4, startX + length - 6,
                                 startY + valueY + 8, 3, new Color(10, 10, 10).getRGB());
                         int longValue = ((startX + length - 6) - (startX + length - 85)) / 2;
-                        font2.drawCenteredStringWithShadow(s.getModeAsString(), (startX + length - 6) - longValue,
+                        font2.drawCenteredStringOutline(s.getModeAsString(), (startX + length - 6) - longValue,
                                 startY + valueY - 0.5F, getColor());
                         boolean hover = mouseX > startX + length - 85 && mouseX < startX + length - 6
                                 && mouseY > startY + valueY - 4 && mouseY < startY + valueY + 8;

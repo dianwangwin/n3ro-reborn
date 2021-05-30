@@ -32,7 +32,7 @@ public class MusicListenerTest extends BasicGame implements MusicListener {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#init(org.newdawn.slick.GameContainer)
+	 * @see BasicGame#init(GameContainer)
 	 */
 	public void init(GameContainer container) throws SlickException {
 		music = new Music("testdata/restart.ogg", false);
@@ -43,27 +43,27 @@ public class MusicListenerTest extends BasicGame implements MusicListener {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#update(org.newdawn.slick.GameContainer, int)
+	 * @see BasicGame#update(GameContainer, int)
 	 */
 	public void update(GameContainer container, int delta) throws SlickException {
 	}
 
 	/**
-	 * @see org.newdawn.slick.MusicListener#musicEnded(org.newdawn.slick.Music)
+	 * @see MusicListener#musicEnded(Music)
 	 */
 	public void musicEnded(Music music) {
 		musicEnded = true;
 	}
 
 	/**
-	 * @see org.newdawn.slick.MusicListener#musicSwapped(org.newdawn.slick.Music, org.newdawn.slick.Music)
+	 * @see MusicListener#musicSwapped(Music, Music)
 	 */
 	public void musicSwapped(Music music, Music newMusic) {
 		musicSwapped = true;
 	}
 	
 	/**
-	 * @see org.newdawn.slick.Game#render(org.newdawn.slick.GameContainer, org.newdawn.slick.Graphics)
+	 * @see org.newdawn.slick.Game#render(GameContainer, Graphics)
 	 */
 	public void render(GameContainer container, Graphics g) throws SlickException {
 		g.drawString("Press M to play music", 100, 100);
@@ -77,7 +77,7 @@ public class MusicListenerTest extends BasicGame implements MusicListener {
 	}
 
 	/**
-	 * @see org.newdawn.slick.BasicGame#keyPressed(int, char)
+	 * @see BasicGame#keyPressed(int, char)
 	 */
 	public void keyPressed(int key, char c) {
 		if (key == Input.KEY_M) {

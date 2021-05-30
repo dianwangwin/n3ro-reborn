@@ -321,15 +321,15 @@ public class AngelCodeFont implements Font {
 	}
 
 	/**
-	 * @see org.newdawn.slick.Font#drawString(float, float, java.lang.String)
+	 * @see Font#drawString(float, float, String)
 	 */
 	public void drawString(float x, float y, String text) {
 		drawString(x, y, text, Color.white);
 	}
 
 	/**
-	 * @see org.newdawn.slick.Font#drawString(float, float, java.lang.String,
-	 *      org.newdawn.slick.Color)
+	 * @see Font#drawString(float, float, String,
+	 *      Color)
 	 */
 	public void drawString(float x, float y, String text, Color col) {
 		drawString(x, y, text, col, 0, text.length() - 1);
@@ -445,7 +445,7 @@ public class AngelCodeFont implements Font {
 	}
 
 	/**
-	 * @see org.newdawn.slick.Font#getHeight(java.lang.String)
+	 * @see Font#getHeight(String)
 	 */
 	public int getHeight(String text) {
 		DisplayList displayList = null;
@@ -484,7 +484,7 @@ public class AngelCodeFont implements Font {
 	}
 
 	/**
-	 * @see org.newdawn.slick.Font#getWidth(java.lang.String)
+	 * @see Font#getWidth(String)
 	 */
 	public int getWidth(String text) {
 		DisplayList displayList = null;
@@ -566,7 +566,7 @@ public class AngelCodeFont implements Font {
 		}
 
 		/**
-		 * @see java.lang.Object#toString()
+		 * @see Object#toString()
 		 */
 		public String toString() {
 			return "[CharDef id=" + id + " x=" + x + " y=" + y + "]";
@@ -609,7 +609,7 @@ public class AngelCodeFont implements Font {
 	}
 
 	/**
-	 * @see org.newdawn.slick.Font#getLineHeight()
+	 * @see Font#getLineHeight()
 	 */
 	public int getLineHeight() {
 		return lineHeight;

@@ -8,42 +8,42 @@ package org.newdawn.slick.openal;
  */
 public class NullAudio implements Audio {
 	/**
-	 * @see org.newdawn.slick.openal.Audio#getBufferID()
+	 * @see Audio#getBufferID()
 	 */
 	public int getBufferID() {
 		return 0;
 	}
 
 	/**
-	 * @see org.newdawn.slick.openal.Audio#getPosition()
+	 * @see Audio#getPosition()
 	 */
 	public float getPosition() {
 		return 0;
 	}
 
 	/**
-	 * @see org.newdawn.slick.openal.Audio#isPlaying()
+	 * @see Audio#isPlaying()
 	 */
 	public boolean isPlaying() {
 		return false;
 	}
 
 	/**
-	 * @see org.newdawn.slick.openal.Audio#playAsMusic(float, float, boolean)
+	 * @see Audio#playAsMusic(float, float, boolean)
 	 */
 	public int playAsMusic(float pitch, float gain, boolean loop) {
 		return 0;
 	}
 
 	/**
-	 * @see org.newdawn.slick.openal.Audio#playAsSoundEffect(float, float, boolean)
+	 * @see Audio#playAsSoundEffect(float, float, boolean)
 	 */
 	public int playAsSoundEffect(float pitch, float gain, boolean loop) {
 		return 0;
 	}
 
 	/**
-	 * @see org.newdawn.slick.openal.Audio#playAsSoundEffect(float, float, boolean, float, float, float)
+	 * @see Audio#playAsSoundEffect(float, float, boolean, float, float, float)
 	 */
 	public int playAsSoundEffect(float pitch, float gain, boolean loop,
 			float x, float y, float z) {
@@ -51,14 +51,14 @@ public class NullAudio implements Audio {
 	}
 
 	/**
-	 * @see org.newdawn.slick.openal.Audio#setPosition(float)
+	 * @see Audio#setPosition(float)
 	 */
 	public boolean setPosition(float position) {
 		return false;
 	}
 
 	/**
-	 * @see org.newdawn.slick.openal.Audio#stop()
+	 * @see Audio#stop()
 	 */
 	public void stop() {
 	}

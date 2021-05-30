@@ -146,7 +146,7 @@ public class Polygon extends Shape {
     }
     
     /**
-     * @see org.newdawn.slick.geom.Shape#setX(float)
+     * @see Shape#setX(float)
      */
     public void setX(float x) {
         super.setX(x);
@@ -155,7 +155,7 @@ public class Polygon extends Shape {
     }
     
     /**
-     * @see org.newdawn.slick.geom.Shape#setY(float)
+     * @see Shape#setY(float)
      */
     public void setY(float y) {
         super.setY(y);
@@ -164,14 +164,14 @@ public class Polygon extends Shape {
     }
     
     /**
-     * @see org.newdawn.slick.geom.Shape#createPoints()
+     * @see Shape#createPoints()
      */
     protected void createPoints() {
 //    	This is empty since a polygon must have it's points all the time.
     }
     
     /**
-     * @see org.newdawn.slick.geom.Shape#closed()
+     * @see Shape#closed()
      */
 	public boolean closed() {
 		return closed;
