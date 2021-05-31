@@ -23,8 +23,8 @@ public class HUD extends Module {
     public static Numbers<Double> hudB = new Numbers("Blue", 255d, 0, 255, 5);
 
     public static Option<Boolean> hudTitle = new Option("WaterMark", true);
-    public static Option<Boolean>hudPosition = new Option("Position", true);
-    public static Option<Boolean>hudArraylist = new Option("Arraylist", true);
+    public static Option<Boolean>hudPosition = new Option("Position", false);
+    public static Option<Boolean>hudArraylist = new Option("Arraylist", false);
     public static Option<Boolean>hudFade = new Option("Fade", true);
    
     public HUD() {

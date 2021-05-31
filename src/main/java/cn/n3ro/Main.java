@@ -5,7 +5,7 @@ import java.util.Map;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.Name;;
 
-
+@Name("Target")
 public class Main implements IFMLLoadingPlugin {
 
 	@Override

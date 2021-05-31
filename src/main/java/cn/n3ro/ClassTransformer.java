@@ -90,6 +90,8 @@ public class ClassTransformer implements IClassTransformer, ClassFileTransformer
                     return transformMethods(classByte, EntityHook::transformEntity);
                 case "net.minecraft.client.entity.EntityPlayerSP": // SP
                     return transformMethods(classByte, EntityPlayerSPHook::transformEntityPlayerSP);
+                case "net.minecraft.client.multiplayer.PlayerControllerMP": // MP
+                    return transformMethods(classByte, EntityPlayerMPHook::transformRange);
                 case "net.minecraft.profiler.Profiler":
                     return transformMethods(classByte, ProfilerHook::transformProfiler);//	2D3D-Render
                 case "net.minecraft.network.NetworkManager":  //	EventPacket

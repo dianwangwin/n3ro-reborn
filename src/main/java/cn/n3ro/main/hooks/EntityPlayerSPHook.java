@@ -97,30 +97,7 @@ public class EntityPlayerSPHook implements Opcodes{
         }
     }
 
-    /*
-     *
-     *	just reach test
-     */
-    public static void transformTest(ClassNode clazz, MethodNode method) {
-        if (method.name.equalsIgnoreCase("getBlockReachDistance") || method.name.equalsIgnoreCase("func_78757_d")){
-            InsnList insnList = new InsnList();
-            insnList.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(MinecraftHook.class), "getBlockReachDistance", "()F", false));
-            method.instructions.insert(insnList);
-        }
-    }
 
-    /*
-     *
-     *	just reach test
-     */
-
-    public static float getBlockReachDistance(){
-        if(ModuleManager.getModuleByName("Reach").isEnable()) {
-            return Reach.reach.getValue().floatValue();
-        } else {
-            return Minecraft.getMinecraft().playerController.isInCreativeMode() ? 5F :4.5F;
-        }
-    }
 
 
     public static void hookMotionUpdate(EventType stage) {
