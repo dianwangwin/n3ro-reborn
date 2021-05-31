@@ -82,39 +82,25 @@ public class Loader {
                 return m.displayName().startsWith("net.minecraft.launchwrapper.Launch");
             }).findFirst().orElse(null);
             if (attach_ == null) {
-                this.error("找不到Minecraft线程");
+                this.error("找不到Minecraft进程");
             } else {
                 try {
                     VirtualMachine attach = VirtualMachine.attach(attach_);
-                    File agentJar = File.createTempFile("+~" + (Math.random() > 0.5D ? "JF" : "DFE"), ".tmp");
+                    //File agentJar = File.createTempFile("+~" + (Math.random() > 0.5D ? "JF" : "DFE"), ".tmp");
                     File injectorJar = new File(Loader.class.getProtectionDomain().getCodeSource().getLocation().toURI());
-                    JFileChooser jf = new JFileChooser();
-                    jf.setCurrentDirectory(new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath()));
-                    FileNameExtensionFilter filter = new FileNameExtensionFilter("Jar文件(*.jar)", new String[]{"jar"});
-                    jf.setFileFilter(filter);
-                    int option = jf.showOpenDialog(jf);
-                    jf.setDialogTitle("请选择你要注入的Jar");
-                    if (option == 0) {
-                        File file = jf.getSelectedFile();
-                        Files.copy(file.toPath(), agentJar.toPath(), StandardCopyOption.REPLACE_EXISTING);
-                        this.clearTemp(agentJar.getParentFile(), agentJar);
-                        this.time(agentJar);
-
-                        try {
-                            attach.loadAgent(agentJar.getAbsolutePath(), encrypt(injectorJar.getAbsolutePath()));
-                        } catch (Exception var11) {
-                            this.error(var11.getMessage());
-                            exit();
-                        }
-
-                        attach.detach();
-                        this.error("注入成功！。祝你好运！");
+                    try {
+                        attach.loadAgent(injectorJar.getAbsolutePath(), encrypt(injectorJar.getAbsolutePath()));
+                    } catch (Exception var11) {
+                        this.error(var11.getMessage());
                         exit();
                     }
+
+                    attach.detach();
+                    this.error("注入成功！。祝你好运！");
+                    exit();
                 } catch (Exception var12) {
                     exit();
                 }
-
             }
         }
     }
@@ -172,7 +158,7 @@ public class Loader {
     private void error(String message) {
         JDialog dialog = new JDialog();
         dialog.setAlwaysOnTop(true);
-        JOptionPane.showMessageDialog(dialog, message, "Rose", 1);
+        JOptionPane.showMessageDialog(dialog, message, "N3RO", 1);
     }
 }
  
